@@ -4,13 +4,13 @@ import InventoryItem from './InventoryItem';
 
 const InventoryTable = ({ inventory, onDelete }) => {
   return (
-    <Table>
+    <Table style={{ width: '100%', borderCollapse: 'collapse', marginBottom: '20px' }}>
       <Thead>
-        <Tr>
-          <Th>Item Name</Th>
-          <Th>Date Entered</Th>
-          <Th>Entered By</Th>
-          <Th>Delete</Th>
+        <Tr style={{ backgroundColor: '#007bff', color: '#fff' }}>
+          <Th style={{ padding: '10px', textAlign: 'left' }}>Item Name</Th>
+          <Th style={{ padding: '10px', textAlign: 'left' }}>Date Entered</Th>
+          <Th style={{ padding: '10px', textAlign: 'left' }}>Entered By</Th>
+          <Th style={{ padding: '10px', textAlign: 'left' }}>Delete</Th>
         </Tr>
       </Thead>
       <Tbody>

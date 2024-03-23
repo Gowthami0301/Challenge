@@ -1,8 +1,9 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
+import './App.css';
 import { Button } from '@chakra-ui/react';
-import AddInventoryModal from './AddInventoryModal';
-import InventoryTable from './InventoryTable';
+import AddInventoryModal from './components/AddInventoryModal';
+import InventoryTable from './components/InventoryTable';
 
 const App = () => {
   const [inventory, setInventory] = useState([]);
@@ -30,7 +31,9 @@ const App = () => {
 
   return (
     <div>
-      <Button onClick={() => setIsModalOpen(true)}>Add Item</Button>
+      <Button  style={{ borderRadius: '6px', padding: '10px 20px', backgroundColor: '#007bff', color: '#fff', border: 'none' }} onClick={() => setIsModalOpen(true)}>Add Item</Button>
+      <br></br>
+      <br></br>
       <AddInventoryModal isOpen={isModalOpen} onClose={() => setIsModalOpen(false)} onAddItem={handleAddItem} />
       <InventoryTable inventory={inventory} onDelete={handleDeleteItem} />
     </div>
